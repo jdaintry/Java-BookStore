@@ -110,10 +110,9 @@ public class ControllerServlet extends HttpServlet {
 
 private void deleteBook(HttpServletRequest request, HttpServletRequest response)
 throws ServletException, IOException {
-     int id  = Interger.request.getParameter("id"));
-		 bookDAo.deleteBook(id);
+     int id  = Interger.parsInt(request.getParameter("id"));
+		 bookDAO.deleteBook(id);
  	 	 response.sendRedirect("list");
-
 }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

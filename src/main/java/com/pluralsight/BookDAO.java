@@ -97,9 +97,8 @@ public void deleteBook(int id){
         PreparedStatement statememt = jdbcConnection.prepareStatement(SQL);
         statement.setInt(1,id);
         statement.executeUpdate();
-        Statement.close
-        } catch (SQLException e)
-            {
+        Statement.close();
+        } catch (SQLException e){
              e.printStackTrace();
             }
        }
