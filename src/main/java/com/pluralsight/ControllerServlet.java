@@ -117,12 +117,13 @@ public class ControllerServlet extends HttpServlet {
 		 bookDAO.deleteBook(id);
 		 response.sendRedirect("list");
 	 }
+
  private void showEditForm(HttpServletRequest request, HttpServletResponse response)
  throws ServletException, IOException {
 	   int id = Integer.parseInt(request.getParameter("id"));
 		 Book existingBook = BookDAO.getBook(id);
 		 RequestDispatcher dispatcher = request.getRequestDispatcher("/BookForm.jsp");
-		 request.setAttribute("book",existingBook");
+		 request.setAttribute("book",existingBook);
 		 dispatcher.forward(request, response);
  }
 
